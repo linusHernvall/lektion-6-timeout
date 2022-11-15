@@ -4,15 +4,15 @@ let timeoutRef;
 
 function main() {
     // Start på programmet.
-   const ref = setTimeout(changeBackgroundColor, 2000);
-    addEventListeners();
+   timeoutRef = setTimeout(changeBackgroundColor, 2000);
+    setupEventListeners();
 }
 
 function changeBackgroundColor() {
-    document.body.style.background = 'lightblue';
+    document.body.style.background = 'lightblue'
 }
 
-function addEventListeners() {
+function setupEventListeners() {
     const button = document.getElementById('cancel');
     button.addEventListener('click', cancelBackgroundChange);
 }
